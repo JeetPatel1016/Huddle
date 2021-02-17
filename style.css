@@ -1,7 +1,11 @@
 body {
     margin:0;
     background:#674bb1;
-    height:100vh
+    height:100vh;
+    outline:none;
+}
+button {
+    outline:none;
 }
 .bg-img {
     position: absolute;
@@ -14,19 +18,28 @@ header {
     padding:60px 50px;
 }
 .logo-container {
-    width:80%;
+    width:20%;
 }
 
-.logo-container svg {
-    transform: scale(0.85);
+.logo-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: auto;
 }
 main {
     width:90%;
-    height:500px;
+    height:fit-content;
     margin:auto;
 }
 main div {
     height:500px;
+}
+.illustration {
+    display:block;
+    width:100%;
+    height:auto;
+    overflow:auto;
 }
 .reg-body {
     padding-left:95px;
@@ -59,4 +72,39 @@ main p {
 .reg-btn:hover {
     color: #fff;
     background-color:#e980e7;
+}
+@media only screen and (max-width:600px) {
+    .bg-img {
+        background-image: url(images/bg-mobile.svg);
+        background-size: cover;
+    }
+    .logo-container {
+        width:45%;
+    }
+    main div {
+        height:400px
+    }
+    .reg-body {
+        padding: 0 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .reg-body > h1 {
+        margin: 0;
+        font-size: 30px;
+        line-height: normal;
+        text-align: center;
+    }
+    .reg-body > p {
+        margin:25px 0 20px 0;
+        font-size: 21px;
+        line-height: normal;
+        text-align: center;
+        width: 85%;
+    }
+    .reg-btn, .reg-btn:hover {
+        font-size:15px;
+        width:250px
+    }
 }
